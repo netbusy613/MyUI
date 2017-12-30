@@ -10,7 +10,7 @@
         <cc:attribute name="width" default="700px"/>
         <cc:attribute name="height" default="500px"/>
         <cc:attribute name="fontsize" default="13"/>
-        <cc:attribute name="lineheight" default="13"/>
+        <cc:attribute name="lineheight" default="0.5"/>
         <cc:attribute name="bytabt" displayName="bytabt" type="com.netbusy.myui.tab.bytab.ByTab" required="true"/>
     </cc:interface>
 
@@ -22,8 +22,8 @@
         <div class="bytab"  style="width:#{cc.attrs.width};height:#{cc.attrs.height};">
             <div class="content">
                 <c:forEach items="#{cc.attrs.bytabt.dateLists}" var="datelist">
-                    <li>
-                        <a href="#{datelist.url}" style="line-height: #{cc.attrs.lineheight}px; font-size: #{cc.attrs.fontsize}px;">
+                    <li style="padding-bottom:#{cc.attrs.lineheight}em;padding-bottom: #{cc.attrs.lineheight}em;">
+                        <a href="#{datelist.url}" style="line-height: #{cc.attrs.fontsize}px; font-size: #{cc.attrs.fontsize}px;">
                             <span class="list_date" ><h:outputText value="#{datelist.date}"><f:convertDateTime pattern="MM-dd" />  </h:outputText></span>
                             <h:outputText class="linetxt" value="#{datelist.txt}"  title="#{datelist.txt}"/>
                         </a>
