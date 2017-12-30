@@ -1,0 +1,147 @@
+@charset "utf-8";
+
+.tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+.tabs li {
+    float: left;
+    margin: 0 .5em 0 0;
+    text-align: center;
+}
+.tabs a {
+    line-height: 13px;
+    font-size: 13px;
+    letter-spacing:2px;
+    position: relative;
+    background: #1C86EE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#191970), to(#1C86EE));
+    background-image: -webkit-linear-gradient(top, #191970, #1C86EE);
+    background-image: -moz-linear-gradient(top, #191970, #1C86EE);
+    background-image: -ms-linear-gradient(top, #191970, #1C86EE);
+    background-image: -o-linear-gradient(top, #191970, #1C86EE);
+    background-image: linear-gradient(to bottom, #191970, #1C86EE);
+    padding: .7em 0.2em .7em 1em;
+    float: left;
+    text-decoration: none;
+    color: white;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+}
+/*.tabs a:hover, .tabs a:hover::after, .tabs a:focus, .tabs a:focus::after {
+    background: #fff;
+}*/
+.tabs a:focus {
+    outline: 0;
+}
+.tabs a::after {
+    content:'';
+    position:absolute;
+    z-index: 1;
+    top: 0;
+    right: -.5em;
+    bottom: 0;
+    width: 1em;
+    background: #1C86EE;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#1C86EE));
+    background-image: -webkit-linear-gradient(top, #191970, #1C86EE);
+    background-image: -moz-linear-gradient(top, #191970, #1C86EE);
+    background-image: -ms-linear-gradient(top, #191970, #1C86EE);
+    background-image: -o-linear-gradient(top, #191970, #1C86EE);
+    background-image: linear-gradient(to bottom, #191970, #1C86EE);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    transform: skew(10deg);
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+.tabs #current a, .tabs #current a::after {
+    color: #444;
+    background: #fff;
+    z-index: 3;
+    font-weight: bolder;
+}
+.tabs a span{
+    padding: .7em 2em .7em 2.5em;
+}
+.tabs #current a span{
+    background: url("#{resource['/bytab/img/jh.gif']}") no-repeat 0px 2px;
+}
+/* ------------------------------------------------- */
+
+.content {
+    background: #fff;
+    padding: 0.5em;
+    position: relative;
+    z-index: 2;
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    -moz-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+}
+.content h2, .content h3, .content p {
+    margin: 0 0 15px 0;
+}
+
+.content ul{
+    padding-left: 0px;
+    margin-top: 0px;
+}
+.content li{
+    text-align: left;
+    list-style: none;
+    padding-left: 7px;
+    background: url("#{resource['/bytab/img/li.gif']}") 0px 5px no-repeat;
+    padding-bottom: 0.5em;
+}
+
+.content li .list_date{
+    float:right;
+    margin-right: 5px;
+    padding-left: 2px;
+}
+
+.content li a{
+    display: block;
+    text-decoration:none; 
+    line-height: 15px;
+    font-size: 12px;
+    letter-spacing:2px;
+}
+
+.linetxt{
+    /*line-height: 1em;
+    height: min-content;*/
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis; 
+    display: block;
+}
+
+.content li a:link {
+    color: black;
+}
+
+.content li a:visited {
+    color: gray;
+}
+.content li a:hover {
+    color: black;
+    font-weight: bold;
+}

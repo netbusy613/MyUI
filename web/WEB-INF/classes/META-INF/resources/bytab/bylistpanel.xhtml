@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:cc="http://xmlns.jcp.org/jsf/composite"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:c="http://xmlns.jcp.org/jsp/jstl/core"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <!-- INTERFACE -->
+    <cc:interface>
+        <cc:attribute name="width" default="700px"/>
+        <cc:attribute name="height" default="500px"/>
+        <cc:attribute name="fontsize" default="13"/>
+        <cc:attribute name="lineheight" default="13"/>
+        <cc:attribute name="bytabt" displayName="bytabt" type="com.netbusy.myui.tab.bytab.ByTab" required="true"/>
+    </cc:interface>
+
+    <!-- IMPLEMENTATION -->
+    <cc:implementation>
+        <h:outputScript name="bytab/js/jquery-1.12.4.min.js"/>
+        <h:outputScript name="bytab/js/tab.js"/>
+        <h:outputStylesheet name="bytab/css/tab.css"/>
+        <div class="bytab"  style="width:#{cc.attrs.width};height:#{cc.attrs.height};">
+            <div class="content">
+                <c:forEach items="#{cc.attrs.bytabt.dateLists}" var="datelist">
+                    <li>
+                        <a href="#{datelist.url}" style="line-height: #{cc.attrs.lineheight}px; font-size: #{cc.attrs.fontsize}px;">
+                            <span class="list_date" ><h:outputText value="#{datelist.date}"><f:convertDateTime pattern="MM-dd" />  </h:outputText></span>
+                            <h:outputText class="linetxt" value="#{datelist.txt}"  title="#{datelist.txt}"/>
+                        </a>
+                    </li>
+                </c:forEach>
+            </div>
+        </div>
+    </cc:implementation>
+</html>
