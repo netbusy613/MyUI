@@ -19,4 +19,27 @@
             </resource-id>
         </component> 
     </tag>
+    <tag>
+        <tag-name>byurllistpanel</tag-name>
+        <component>
+            <resource-id>
+                resources/bytab/byurllistpanel.xhtml
+            </resource-id>
+        </component> 
+    </tag>
+    <tag>
+        <tag-name>bypanel</tag-name>
+        <component>
+            <resource-id>
+                resources/bytab/bypanel.xhtml
+            </resource-id>
+        </component> 
+    </tag><tag>
+        <tag-name>byurlpanel</tag-name>
+        <component>
+            <resource-id>
+                resources/bytab/byurlpanel.xhtml
+            </resource-id>
+        </component> 
+    </tag>
 </facelet-taglib>
